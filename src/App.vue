@@ -1,23 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <vHead></vHead>
+    <classfiy></classfiy>
     <router-view/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+  import classfiy from '@/classfiy/classfiy'
+  import vHead from '@/view/vHead/vHead'
+
+  export default {
+    name: 'App',
+    components: {
+      classfiy,
+      vHead
+    }
+  }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import 'assets/css/reset.css';
 </style>
